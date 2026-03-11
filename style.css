@@ -45,15 +45,16 @@ gap:8px;
 
 .item{
 background:#222;
-padding:5px;
 border-radius:8px;
-text-align:center;
-font-size:12px;
+overflow:hidden;
+aspect-ratio:3 / 4;
+display:flex;
+flex-direction:column;
 }
 
 .item img{
 width:100%;
-aspect-ratio:4 / 3;
+height:100%;
 object-fit:cover;
 border-radius:6px;
 }
