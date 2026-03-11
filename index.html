@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff4dd2">
+
+  </head>
+    
+  <body>
+  <h1>My Digital Closet</h1>
+
+<section>
+
+<h2>Add Item</h2>
+
+<input id="name" placeholder="Item name">
+
+<select id="category">
+<option value="">Category</option>
+<option>Tops</option>
+<option>Bottoms</option>
+<option>Dresses</option>
+<option>Outerwear</option>
+<option>Shoes</option>
+<option>Accessories</option>
+</select>
+
+<input id="brand" placeholder="Brand">
+<input id="colors" placeholder="Colors (comma separated)">
+<input id="tags" placeholder="Tags (comma separated)">
+<input type="file" id="image">
+
+<button onclick="addItem()">Add Item</button>
+
+</section>
+
+<hr>
+
+<section>
+
+<h2>Filters</h2>
+
+<select id="categoryFilter" onchange="displayCloset()">
+<option value="">All Categories</option>
+<option>Tops</option>
+<option>Bottoms</option>
+<option>Dresses</option>
+<option>Outerwear</option>
+<option>Shoes</option>
+<option>Accessories</option>
+</select>
+
+<input id="brandFilter" placeholder="Filter brand" oninput="displayCloset()">
+<input id="colorFilter" placeholder="Filter color" oninput="displayCloset()">
+<input id="tagFilter" placeholder="Filter tag" oninput="displayCloset()">
+
+</section>
+
+<hr>
+
+<h2>Closet</h2>
+
+<div id="closet"></div>
+
+<hr>
+
+<h2>Outfit Builder</h2>
+
+<div id="outfitBuilder"></div>
+
+<button onclick="saveOutfit()">Save Outfit</button>
+
+<h3>Saved Outfits</h3>
+
+<div id="savedOutfits"></div>
+
+<hr>
+
+<h2>Closet Statistics</h2>
+
+<div id="stats"></div>
+
+<hr>
+
+<div id="itemModal" class="modal">
+<div class="modalContent">
+<span class="close" onclick="closeModal()">×</span>
+<div id="itemDetails"></div>
+</div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
